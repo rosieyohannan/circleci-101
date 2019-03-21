@@ -5,17 +5,16 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: echo "A first hello" 
+      - run: echo "A first hello"
       - run: sleep 25
   two:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: echo "A second HELLO" 
+      - run: echo "A second HELLOOOO"
       - run: sleep 15
-      
-  workflows:
+workflows:
   version: 2
   one_and_two:
     jobs:
