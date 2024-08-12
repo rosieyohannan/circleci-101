@@ -18,6 +18,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
+      - run: circleci tests run --help
       # Replace this with steps to build a package, or executable
       - run:
           name: Build an artifact
