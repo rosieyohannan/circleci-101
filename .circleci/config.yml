@@ -41,7 +41,7 @@ workflows:
   example:
     jobs:
       - test
-          context: @job-context test
+          context: &job-context test
       - build:
           requires:
             - test
