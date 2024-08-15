@@ -40,7 +40,7 @@ jobs:
 workflows:
   example:
     jobs:
-      - test
+      - test:
           context: &job-context test
       - build:
           requires:
