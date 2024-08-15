@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       # Replace this with a real test runner invocation
-      - run: echo 'My favorite colour is $colour'
+      - run: echo 'My favorite colour is' $colour
       - run:
           name: Run tests
           command: echo 'replace me with real tests!'
