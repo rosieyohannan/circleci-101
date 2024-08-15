@@ -43,12 +43,12 @@ workflows:
   example:
     jobs:
       - test
-          context: @job-context
+          context: *job-context
       - build:
           requires:
             - test
-          context: @job-context
+          context: *job-context
       - deploy:
           requires:
             - test
-          context: @job-context
+          context: *job-context
