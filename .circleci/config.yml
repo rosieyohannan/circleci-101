@@ -3,6 +3,9 @@
 # See: https://circleci.com/docs/configuration-reference
 # Stacks detected: cicd:empty:
 version: 2.1
+
+@job-context: test
+
 jobs:
   test:
     docker:
@@ -40,9 +43,12 @@ workflows:
   example:
     jobs:
       - test
+          context: @job-context
       - build:
           requires:
             - test
+          context: @job-context
       - deploy:
           requires:
             - test
+          context: @job-context
