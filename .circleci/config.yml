@@ -22,6 +22,7 @@ jobs:
       - checkout
       - run: circleci tests run --help
       # Replace this with steps to build a package, or executable
+      - run: echo 'My favorite colour is' $colour
       - run:
           name: Build an artifact
           command: touch example.txt
@@ -32,6 +33,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       # Replace this with steps to deploy to users
+      - run: echo 'My favorite colour is' $colour
       - run:
           name: deploy
           command: '#e.g. ./deploy.sh'
