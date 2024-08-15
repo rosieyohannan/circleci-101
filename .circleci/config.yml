@@ -4,8 +4,6 @@
 # Stacks detected: cicd:empty:
 version: 2.1
 
-@job-context: test
-
 jobs:
   test:
     docker:
@@ -43,7 +41,7 @@ workflows:
   example:
     jobs:
       - test
-          context: *job-context
+          context: @job-context test
       - build:
           requires:
             - test
